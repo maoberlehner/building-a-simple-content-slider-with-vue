@@ -109,10 +109,17 @@
         </div>
       </SliderFrame>
     </section>
+
+    <section class="App__example o-vertical-spacing o-vertical-spacing--l">
+      <h2>Image Slider</h2>
+
+      <ImageSlider :slides="imageSlides"/>
+    </section>
   </div>
 </template>
 
 <script>
+import ImageSlider from './components/ImageSlider';
 import SliderFrame from './components/SliderFrame';
 import SliderSlide from './components/SliderSlide.vue';
 import SliderSlides from './components/SliderSlides.vue';
@@ -120,9 +127,32 @@ import SliderSlides from './components/SliderSlides.vue';
 export default {
   name: `App`,
   components: {
+    ImageSlider,
     SliderFrame,
     SliderSlide,
     SliderSlides,
+  },
+  data() {
+    return {
+      imageSlides: [
+        {
+          headline: `Lorem Ipsum`,
+          image: `https://images.unsplash.com/photo-1491002052546-bf38f186af56?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36540868671b0e7942ab946c0e44503d&auto=format&fit=crop&w=400&h=300&q=80`,
+        },
+        {
+          headline: `Dolor sit`,
+          image: `https://images.unsplash.com/photo-1483119624769-b1a73c256500?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjExMDk0fQ&s=1f605cd0d214c866787dc3c2924ba07f&auto=format&fit=crop&w=400&h=300&q=80`,
+        },
+        {
+          headline: `Lorem Dolor`,
+          image: `https://images.unsplash.com/photo-1517362302400-873b4e30f5c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fbd75d3010ba4abe9a4e747b96f57c93&auto=format&fit=crop&w=400&h=300&q=80`,
+        },
+        {
+          headline: `Dolor Lorem sit`,
+          image: `https://images.unsplash.com/photo-1516750930166-ed88ab1adb61?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=65c8f6fcafaf68f5fa434b5f076780fd&auto=format&fit=crop&w=400&h=300&q=80`,
+        },
+      ],
+    };
   },
 };
 </script>
