@@ -25,7 +25,7 @@ export default {
     },
   },
   mounted() {
-    // Activate the first slide immediately.
+    // Immediately activate the first slide.
     this.goToIndex(this.activeIndex);
   },
   methods: {
